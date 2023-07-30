@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -10,10 +12,15 @@
       background-color: #f5f5f5;
     }
     header{
-        background-color: #090505;
+        background-color: #000000;
         color: #fff;
         text-align: center;
         padding: 10px;
+    }
+    .fade-in-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s, transform 1s;
     }
    
     h1 {
@@ -24,13 +31,13 @@
       color: #fff;
       text-align: center;
       padding: 10px;
-      font-size: 18px;
+      font-size: 20px;
 
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      padding: 7px;
+      padding: 8px;
     }
     nav a:hover {
       background-color: #555;
@@ -51,8 +58,10 @@
         left: 0px;
         flex: 0 0 150px; 
     }
-    body{
-        background-color: #c8c8c8;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
@@ -60,10 +69,8 @@
     <header>
         <img src="123.jpg" class="hello">
     <h1>MANU N R</h1>
-    <h3>Front-end Developer | Data Analyst | Electronics Engineer </h3>
-    
+    <h3>Front-end Developer | Data Analyst | Electronics Engineer </h3>    
 </header>
-
   <nav>
     <a href="#about">About</a>
     <a href="#education">Education</a>
@@ -72,26 +79,26 @@
     <a href="#Achievements">Achievements</a>
     <a href="#certification">Certifications</a>
     <a href="#contact">Contact</a>
-  </nav>
-  
+  </nav> 
   <section id="about">
     <h2>About</h2>
     <p>As a dedicated B.Tech ECE student, I possess a profound interest in technology and innovation. With a solid foundation in technical concepts and hands-on experience gained through projects, I am adept at problem-solving and working collaboratively. Eager to apply my skills and knowledge to contribute to innovative solutions and make a meaningful impact.</p>
   </section>
-
   <section id="education">
     <h2>Education</h2><ul>
     <li><h4><i>B.Tech</i></h4>
-    <p>Reva University - Electronics and Communication Engineering</p></li>
-    <p>Graduation Year: 2024</p>
+    <p>Reva University - Electronics and Communication Engineering</p>
+    <p>CGPA - 8.5</p>
+    <p>Graduation Year: 2024</p></li>
     <li><h4><i>12th</i></h4>
     <p>Global PU College</p>
+    <p>84.5%</p>
     <p>2018 - 2020</p></li>
     <li><h4><i>10th</i></h4>
     <p>Global Residential School</p>
-    <p>2008 - 2018</p></li></ul>
+    <p>84.5%</p>
+    <p>2008 - 2018</p></li>
   </section>
-
   <section id="skills">
     <h2>Skills</h2>
         <ul><li><P>Programming Languages</P></li>
@@ -119,7 +126,6 @@
     <p>A website built using HTML and CSS to represent my Academic Profile.
     </p></li></ul>
 </section>
-
   <section id="certification">
     <h2>Certification</h2>
     <ul>
@@ -129,12 +135,11 @@
         <li><p>Introduction to Internet Of Things and Embeded Systems - University of California, Irvine | Coursera</p></li>
         <li><p>Programming Fundamentals - Duke University | Coursera</p></li>
         <li><p>Interfacing with Arduino - University of California,Irvine | Coursera</p></li>
-        <li><p>Introduction to the Internet of things and Embedded Systems | Coursera</p></li>
+        <li><p>Introduction to the Internet of things and Embedded Systems - University of California, Irvine | Coursera</p></li>
         <li><p>Design Thinking - University of Virginia Darden school of Buisness | Coursera</p></li>
         <li><p>Programming for everybody(Getting started with python) - University of Michigan | Coursera</p></li>
     </ul>
   </section>
-
   <section id="Achievements">
     <h2>Achievements</h2>
     <ul>
@@ -144,15 +149,25 @@
     Qwiklabs</p></li>
     </ul>
   </section>
-
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: sarumanu36@gmail.com</p>
     <p>Phone: 9620423363</p>
     <p>Linkedin: <a href="www.linkedin.com/in/manu-n-r-6a5ba0259">www.linkedin.com/in/manu-n-r-6a5ba0259</a></p>
   </section>
-
-  <footer><p></p>
+  <footer><p>
+  </p>
   </footer>
+      <!-- Add your JavaScript code here -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  
+      <!-- Example animation -->
+      <script type="text/javascript">
+        gsap.from("header", {duration: 1, opacity: 0, y:-50});
+        gsap.from("nav", {duration: 1, opacity: 0, x:-50});
+        gsap.from("section", {duration: 1, opacity: 0, y:+50});
+        gsap.from("article", {duration: 1, opacity: 0, x:+50});
+      </script>
 </body>
 </html>
